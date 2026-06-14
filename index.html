@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eva — the AI receptionist for aesthetic clinics | Ireland</title>
+  <meta name="description" content="Eva answers every call at your aesthetic clinic, 24/7. Books treatments, takes deposits to stop no-shows, and speaks with a natural Irish voice. Built in Ireland by Elleo." />
+  <meta property="og:title" content="Meet Eva — the AI receptionist for aesthetic clinics" />
+  <meta property="og:description" content="Never miss a high-value booking again. Eva answers 24/7, books treatments, and cuts no-shows with deposits. Call her now." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ivory: #faf6f1;
+      --cream: #f3ece3;
+      --charcoal: #2b2622;
+      --muted: #6f655c;
+      --gold: #b8956a;
+      --gold-deep: #9a7850;
+      --blush: #e8d5cc;
+      --line: #e5dcd1;
+      --white: #fffdfb;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--charcoal);
+      background: var(--ivory);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    a { color: inherit; }
+
+    /* Nav */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; letter-spacing: 0.02em; }
+    .logo span { color: var(--gold); }
+    .nav-cta { font-size: 14px; font-weight: 500; padding: 10px 20px; border: 1px solid var(--charcoal); border-radius: 100px; text-decoration: none; transition: all .2s; }
+    .nav-cta:hover { background: var(--charcoal); color: var(--ivory); }
+
+    /* Hero */
+    .hero { padding: 70px 0 90px; text-align: center; }
+    .eyebrow { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 22px; }
+    .hero h1 { font-size: clamp(44px, 7vw, 78px); margin-bottom: 24px; }
+    .hero h1 em { font-style: italic; color: var(--gold-deep); }
+    .hero p.lead { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); max-width: 620px; margin: 0 auto 40px; }
+    .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center; }
+    .btn-primary { background: var(--charcoal); color: var(--ivory); text-decoration: none; padding: 16px 32px; border-radius: 100px; font-weight: 500; font-size: 16px; transition: all .2s; }
+    .btn-primary:hover { background: var(--gold-deep); }
+    .btn-ghost { text-decoration: none; padding: 16px 28px; font-weight: 500; font-size: 16px; border-bottom: 1px solid var(--line); }
+
+    /* Phone showcase */
+    .phone-card { margin: 56px auto 0; max-width: 460px; background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 36px; box-shadow: 0 30px 60px -30px rgba(43,38,34,0.18); }
+    .phone-card .tag { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 10px; }
+    .phone-card .num { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 6vw, 46px); font-weight: 600; letter-spacing: 0.01em; }
+    .phone-card .num a { text-decoration: none; }
+    .phone-card .sub { font-size: 15px; color: var(--muted); margin-top: 8px; }
+
+    /* Sections */
+    section.band { padding: 84px 0; }
+    .band.alt { background: var(--cream); }
+    .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .section-head .eyebrow { margin-bottom: 16px; }
+    .section-head h2 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 16px; }
+    .section-head p { font-size: 18px; color: var(--muted); }
+
+    /* Stat */
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
+    .stat .big { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 600; color: var(--gold-deep); line-height: 1; }
+    .stat .lbl { font-size: 15px; color: var(--muted); margin-top: 10px; }
+
+    /* Features grid */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .feature { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 30px; }
+    .feature .ico { width: 44px; height: 44px; border-radius: 12px; background: var(--blush); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
+    .feature h3 { font-size: 25px; margin-bottom: 8px; }
+    .feature p { font-size: 15px; color: var(--muted); }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; counter-reset: step; }
+    .step { text-align: center; }
+    .step .n { counter-increment: step; font-family: 'Cormorant Garamond', serif; font-size: 40px; color: var(--gold); font-weight: 600; }
+    .step .n::before { content: counter(step); }
+    .step h3 { font-size: 24px; margin: 8px 0; }
+    .step p { font-size: 15px; color: var(--muted); }
+
+    /* Pricing */
+    .price-card { max-width: 440px; margin: 0 auto; background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 44px; text-align: center; box-shadow: 0 30px 60px -34px rgba(43,38,34,0.2); }
+    .price-card .amt { font-family: 'Cormorant Garamond', serif; font-size: 68px; font-weight: 600; line-height: 1; }
+    .price-card .amt small { font-size: 22px; color: var(--muted); }
+    .price-card .free { display: inline-block; margin-top: 14px; background: var(--blush); color: var(--gold-deep); font-size: 14px; font-weight: 600; padding: 6px 16px; border-radius: 100px; }
+    .price-card ul { list-style: none; text-align: left; margin: 28px 0; }
+    .price-card li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; display: flex; gap: 10px; }
+    .price-card li::before { content: "✓"; color: var(--gold-deep); font-weight: 700; }
+    .price-card li:last-child { border-bottom: none; }
+
+    /* CTA band */
+    .cta-band { background: var(--charcoal); color: var(--ivory); text-align: center; padding: 84px 0; }
+    .cta-band h2 { font-size: clamp(34px, 5vw, 54px); margin-bottom: 18px; }
+    .cta-band p { color: #cdbfb2; font-size: 18px; margin-bottom: 32px; }
+    .cta-band .num { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 52px); font-weight: 600; }
+    .cta-band .num a { text-decoration: none; color: var(--ivory); }
+    .cta-band .btn-primary { background: var(--ivory); color: var(--charcoal); margin-top: 28px; }
+    .cta-band .btn-primary:hover { background: var(--gold); color: var(--white); }
+
+    /* Footer */
+    footer { padding: 48px 0; text-align: center; font-size: 14px; color: var(--muted); }
+    footer .logo { font-size: 22px; margin-bottom: 10px; }
+    footer a { color: var(--gold-deep); text-decoration: none; }
+
+    @media (max-width: 760px) {
+      .stat-row, .features, .steps { grid-template-columns: 1fr; }
+      .hero { padding: 40px 0 60px; }
+      section.band { padding: 60px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo">Eva<span>.</span></div>
+      <a class="nav-cta" href="#demo">Book a demo</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">The AI receptionist for aesthetic clinics</div>
+      <h1>Meet <em>Eva</em>.<br/>She never misses a call.</h1>
+      <p class="lead">Eva answers every call to your clinic — day, night, and weekends — books treatments straight into your calendar, and takes deposits to stop no-shows. All in a warm, natural Irish voice.</p>
+      <div class="cta-row">
+        <a class="btn-primary" href="#demo">Hear Eva for yourself</a>
+        <a class="btn-ghost" href="#how">See how it works</a>
+      </div>
+
+      <div class="phone-card">
+        <div class="tag">Call the live demo now</div>
+        <div class="num"><a href="tel:+353868006025">086 800 6025</a></div>
+        <div class="sub">Eva will answer as a sample clinic, "Lumière Aesthetics." Try to book a treatment, ask about prices, or ask for a consultation.</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROBLEM -->
+  <section class="band alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">The hidden cost of a missed call</div>
+        <h2>Every missed call is a treatment that booked elsewhere.</h2>
+        <p>Your team can't answer while they're with a client. The phone rings out — and a €300 filler enquiry rings the clinic down the road instead.</p>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="big">1 in 3</div><div class="lbl">calls to busy clinics go unanswered</div></div>
+        <div class="stat"><div class="big">24/7</div><div class="lbl">Eva answers, including evenings &amp; weekends</div></div>
+        <div class="stat"><div class="big">€0</div><div class="lbl">setup fee — live in days, not weeks</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What Eva does</div>
+        <h2>A flawless front desk that never clocks off.</h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="ico">📅</div>
+          <h3>Books treatments</h3>
+          <p>Eva checks your availability and books consultations and treatments straight into your calendar, confirming every detail back before she does.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">💳</div>
+          <h3>Takes deposits</h3>
+          <p>She texts a secure payment link for the deposit on every booking — cutting no-shows without your team ever touching a card.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">🇮🇪</div>
+          <h3>A real Irish voice</h3>
+          <p>Built and tuned in Ireland, Eva understands Irish accents and names — from Cork to Donegal — and sounds like one of your own team.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">🌙</div>
+          <h3>Answers after hours</h3>
+          <p>Evenings, weekends, lunch breaks, holidays. Every enquiry is captured the moment it comes in, never lost to voicemail.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">💬</div>
+          <h3>Answers the questions</h3>
+          <p>Prices, treatments, aftercare, parking, opening hours — Eva knows your clinic inside out and answers instantly and accurately.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">⚠️</div>
+          <h3>Knows when to escalate</h3>
+          <p>A possible reaction or an unhappy client is flagged straight to your team for a callback — never fobbed off, never given advice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="band alt" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Live in three simple steps.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n"></div><h3>We learn your clinic</h3><p>Your treatments, prices, hours and tone of voice. We tune Eva to sound like part of your team.</p></div>
+        <div class="step"><div class="n"></div><h3>Divert your number</h3><p>Send Eva your overflow, after-hours, or every call. No new hardware, no disruption — set up in days.</p></div>
+        <div class="step"><div class="n"></div><h3>Never miss again</h3><p>Eva answers, books, and confirms — and you see every call, transcript and booking in your dashboard.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Simple pricing</div>
+        <h2>One plan. No setup fee.</h2>
+        <p>Less than the cost of a few missed treatments a month.</p>
+      </div>
+      <div class="price-card">
+        <div class="amt">€449<small>/month</small></div>
+        <div class="free">No setup fee</div>
+        <ul>
+          <li>Unlimited calls answered, 24/7</li>
+          <li>Books treatments &amp; consultations</li>
+          <li>Deposit collection by secure link</li>
+          <li>Natural Irish voice</li>
+          <li>SMS confirmations</li>
+          <li>Call transcripts &amp; recordings dashboard</li>
+          <li>Unlimited tuning as your clinic grows</li>
+        </ul>
+        <a class="btn-primary" href="#demo" style="display:block;">Book a 15-minute demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" id="demo">
+    <div class="wrap">
+      <h2>Hear Eva answer your clinic.</h2>
+      <p>Call the live demo and try to catch her out. Then we'll set her up for you.</p>
+      <div class="num"><a href="tel:+353868006025">086 800 6025</a></div>
+      <div><a class="btn-primary" href="mailto:hello@meeteva.ie?subject=Eva%20demo%20for%20my%20clinic">Book a demo by email</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="logo">Eva<span style="color:var(--gold)">.</span></div>
+      <p>The AI receptionist for aesthetic clinics. Built in Ireland by <a href="https://elleo.ie">Elleo</a>.</p>
+      <p style="margin-top:8px;">hello@meeteva.ie · <a href="tel:+353868006025">086 800 6025</a></p>
+    </div>
+  </footer>
+</body>
+</html>
